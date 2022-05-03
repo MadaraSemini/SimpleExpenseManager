@@ -23,7 +23,6 @@ public class SQliteExpenseManager extends ExpenseManager {
         AccountDAO sqliteAccountDAO =new SQLiteAccountDAO(this.context);
         setAccountsDAO(sqliteAccountDAO);
 
-//        TransactionDAO sqliteTransactionDAO = new InMemoryTransactionDAO();
         TransactionDAO sqliteTransactionDAO = new SQLiteTransactionDAO(this.context);
         setTransactionsDAO(sqliteTransactionDAO);
 

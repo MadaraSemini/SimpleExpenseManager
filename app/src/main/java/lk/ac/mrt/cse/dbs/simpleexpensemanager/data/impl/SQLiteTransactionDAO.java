@@ -21,15 +21,12 @@ public class SQLiteTransactionDAO extends DatabaseHelper implements TransactionD
     private List<Transaction> transactions;
     public SQLiteTransactionDAO(@Nullable Context context) {
         super(context);
-        this.transactions=new ArrayList<Transaction>();
+//        this.transactions=new ArrayList<Transaction>();
     }
 
     @Override
     public void logTransaction(Date date, String accountNo, ExpenseType expenseType, double amount) {
-//        Calendar calender = Calendar.getInstance();
-//        calender.setTime(date);
-//        String startdate = calender.get(Calendar.YEAR) + "," + calender.get(Calendar.MONTH) +","+ calender.get(Calendar.DAY_OF_MONTH);
-        String transDate =new SimpleDateFormat("dd-mm-yyyy").format(date);
+        String transDate =new SimpleDateFormat("dd-MM-YYYY").format(date);
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -44,6 +41,7 @@ public class SQLiteTransactionDAO extends DatabaseHelper implements TransactionD
 
     @Override
     public List<Transaction> getAllTransactionLogs() {
+        List<Transaction> transactions=new ArrayList<>();
         String selectQuery = "select * from transactions";
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -54,7 +52,7 @@ public class SQLiteTransactionDAO extends DatabaseHelper implements TransactionD
             do{
                 String startdate = cursor.getString(2);
                 try {
-                    Date transDate = new SimpleDateFormat("dd-mm-yyyy").parse(startdate);
+                    Date transDate = new SimpleDateFormat("dd-MM-YYYY").parse(startdate);
                     String accountNo = cursor.getString(1);
 
                     String type = cursor.getString(3);
@@ -67,11 +65,6 @@ public class SQLiteTransactionDAO extends DatabaseHelper implements TransactionD
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-//                Calendar calendar = Calendar.getInstance();
-//                calendar.set(Integer.parseInt(startdate[0]),Integer.parseInt(startdate[1]), Integer.parseInt(startdate[2]));
-//                Date strdate = calendar.getTime();
-
-
 
 
             }while(cursor.moveToNext());

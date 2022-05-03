@@ -74,6 +74,12 @@ public class SQLiteAccountDAO extends DatabaseHelper implements AccountDAO {
 
     @Override
     public Account getAccount(String accountNo) throws InvalidAccountException {
+        List<String> accountNumbers = this.getAccountNumbersList();
+        if (!accountNumbers.contains(accountNo)) {
+            String msg = "Account " + accountNo + " is invalid.";
+            throw new InvalidAccountException(msg);
+        }
+
         SQLiteDatabase db = this.getReadableDatabase();
         String selectQuery = "select * from accounts where accountNo = '"+ accountNo + "' ;";
         Cursor cursor = db.rawQuery(selectQuery,null);
@@ -101,7 +107,6 @@ public class SQLiteAccountDAO extends DatabaseHelper implements AccountDAO {
             cv.put("balance",account.getBalance());
 
             db.insert("accounts",null, cv);
-            //yfyfytfyfu
 
         }
 
@@ -136,17 +141,14 @@ public class SQLiteAccountDAO extends DatabaseHelper implements AccountDAO {
             case EXPENSE:
                 String updateQuery1 = "update accounts set balance = "+ (balance-amount) +" where accountNo = '"+accountNo+"' ;";
                 db.execSQL(updateQuery1);
-//                balance  -= amount;
                 break;
             case INCOME:
                 String updateQuery2 = "update accounts set balance = "+ (balance+amount) +" where accountNo = '"+accountNo+"' ;";
                 db.execSQL(updateQuery2);
-//                balance  += amount;
                 break;
         }
 
-//        String updateQuery = "update accounts set balance = "+ (balance-amount) +" where accountNo = '"+accountNo+"' ;";
-//        db.execSQL(updateQuery);
+
 
         cursor.close();
         db.close();

@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDB) {
         String createAccountTable="CREATE TABLE accounts(accountNo TEXT PRIMARY KEY , accountHolderName TEXT, bankName TEXT , balance REAL);";
-        String createTransactionTable ="CREATE TABLE transactions(transactionId INTEGER PRIMARY KEY AUTOINCREMENT, accountNo TEXT , date TEXT , type TEXT, amount REAL);";
+        String createTransactionTable ="CREATE TABLE transactions(transactionId INTEGER PRIMARY KEY AUTOINCREMENT, accountNo TEXT , date TEXT , type TEXT, amount REAL, FOREIGN KEY (accountNo) REFERENCES accountd(accountNo) ON DELETE CASCADE ON UPDATE CASCADE);";
 
         sqLiteDB.execSQL(createAccountTable);
         sqLiteDB.execSQL(createTransactionTable);
