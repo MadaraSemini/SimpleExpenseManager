@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class SQLiteAccountDAO extends DatabaseHelper implements AccountDAO {
     @Override
     public List<String> getAccountNumbersList() {
 
-        List<String> accountNumbers = new ArrayList<String>();
+        List<String> accountNumbers = new ArrayList<>();
 
         String selectQuery = "select accountNo from accounts";
 
@@ -45,7 +46,7 @@ public class SQLiteAccountDAO extends DatabaseHelper implements AccountDAO {
 
     @Override
     public List<Account> getAccountsList() {
-        List<Account> accountList =new ArrayList<Account>();
+        List<Account> accountList =new ArrayList<>();
 
         String selectQuery = "select * from accounts";
 
