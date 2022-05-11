@@ -1,2 +1,3 @@
-05-11 14:28:59.849  7446  7468 I TestRunner: started: testAddAccount(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
-05-11 14:28:59.858  7446  7468 I TestRunner: finished: testAddAccount(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 16:02:56.886  3267  3291 I TestRunner: started: testAddAccount(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 16:02:57.394  3267  3291 W eexpensemanage: JNI critical lock held for 35.605ms on Thread[18,tid=3291,Runnable,Thread*=0xdac4e010,peer=0x12c6e898,"Instr: androidx.test.runner.AndroidJUnitRunner"]
+05-11 16:02:57.407  3267  3291 I TestRunner: finished: testAddAccount(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)

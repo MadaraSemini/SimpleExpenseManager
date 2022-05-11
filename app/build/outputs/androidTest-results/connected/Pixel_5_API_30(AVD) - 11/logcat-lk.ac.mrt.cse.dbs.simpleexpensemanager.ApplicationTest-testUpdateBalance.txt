@@ -1,2 +1,2 @@
-05-11 14:28:59.860  7446  7468 I TestRunner: started: testUpdateBalance(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
-05-11 14:28:59.905  7446  7468 I TestRunner: finished: testUpdateBalance(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 16:02:57.409  3267  3291 I TestRunner: started: testUpdateBalance(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 16:02:57.600  3267  3291 I TestRunner: finished: testUpdateBalance(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)

@@ -1,2 +1,2 @@
-05-11 14:28:59.908  7446  7468 I TestRunner: started: testLogTransaction(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
-05-11 14:28:59.948  7446  7468 I TestRunner: finished: testLogTransaction(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 16:02:57.603  3267  3291 I TestRunner: started: testLogTransaction(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 16:02:57.885  3267  3291 I TestRunner: finished: testLogTransaction(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)

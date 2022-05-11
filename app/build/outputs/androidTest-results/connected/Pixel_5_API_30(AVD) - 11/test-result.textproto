@@ -1,4 +1,4 @@
-# 2022-05-11T08:59:01.516Z:
+# 2022-05-11T10:32:59.837Z:
 test_suite_meta_data {
   scheduled_test_case_count: 3
 }
@@ -9,12 +9,12 @@ test_result {
     test_package: "lk.ac.mrt.cse.dbs.simpleexpensemanager"
     test_method: "testAddAccount"
     start_time {
-      seconds: 1652259540
-      nanos: 758000000
+      seconds: 1652265177
+      nanos: 800000000
     }
     end_time {
-      seconds: 1652259540
-      nanos: 788000000
+      seconds: 1652265178
+      nanos: 134000000
     }
   }
   test_status: PASSED
@@ -61,12 +61,12 @@ test_result {
     test_package: "lk.ac.mrt.cse.dbs.simpleexpensemanager"
     test_method: "testUpdateBalance"
     start_time {
-      seconds: 1652259540
-      nanos: 805000000
+      seconds: 1652265178
+      nanos: 146000000
     }
     end_time {
-      seconds: 1652259540
-      nanos: 805000000
+      seconds: 1652265178
+      nanos: 348000000
     }
   }
   test_status: PASSED
@@ -113,12 +113,12 @@ test_result {
     test_package: "lk.ac.mrt.cse.dbs.simpleexpensemanager"
     test_method: "testLogTransaction"
     start_time {
-      seconds: 1652259540
-      nanos: 806000000
+      seconds: 1652265178
+      nanos: 350000000
     }
     end_time {
-      seconds: 1652259540
-      nanos: 832000000
+      seconds: 1652265178
+      nanos: 627000000
     }
   }
   test_status: PASSED
