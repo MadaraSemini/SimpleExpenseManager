@@ -82,12 +82,14 @@ public class SQLiteAccountDAO extends DatabaseHelper implements AccountDAO {
         }
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String selectQuery = "select * from accounts where accountNo = '"+ accountNo + "' ;";
+        String selectQuery = "select bankName,accountHolderName,balance from accounts where accountNo = '"+ accountNo + "' ;";
         Cursor cursor = db.rawQuery(selectQuery,null);
 
-        String bankName = cursor.getString(1);
-        String accountHolderName = cursor.getString(2);
-        double balance = cursor.getInt(3);
+
+        cursor.moveToFirst();
+        String bankName = cursor.getString(0);
+        String accountHolderName = cursor.getString(1);
+        double balance = cursor.getInt(2);
 
         Account account = new Account(accountNo,bankName,accountHolderName,balance);
 
