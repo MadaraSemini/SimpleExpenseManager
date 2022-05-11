@@ -1,0 +1,2 @@
+05-11 14:28:59.849  7446  7468 I TestRunner: started: testAddAccount(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
+05-11 14:28:59.858  7446  7468 I TestRunner: finished: testAddAccount(lk.ac.mrt.cse.dbs.simpleexpensemanager.ApplicationTest)
