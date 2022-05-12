@@ -67,19 +67,19 @@ public class ApplicationTest {
 
     }
 
-    @Test
-    public void testUpdateBalance() {
-        try {
-            Account account = expenseManager.getAccountsDAO().getAccount("123a");
-            double currentBalance = account.getBalance();
-            expenseManager.getAccountsDAO().updateBalance("123a", ExpenseType.INCOME, 500.0);
-
-            assertEquals(currentBalance + 500.0, expenseManager.getAccountsDAO().getAccount("123a").getBalance(), 0.0);
-        } catch (InvalidAccountException e) {
-            assertTrue(false);
-//           fail("Test fail");
-        }
-    }
+//    @Test
+//    public void testUpdateBalance() {
+//        try {
+//            Account account = expenseManager.getAccountsDAO().getAccount("123a");
+//            double currentBalance = account.getBalance();
+//            expenseManager.getAccountsDAO().updateBalance("123a", ExpenseType.INCOME, 500.0);
+//
+//            assertEquals(currentBalance + 500.0, expenseManager.getAccountsDAO().getAccount("123a").getBalance(), 0.0);
+//        } catch (InvalidAccountException e) {
+//            assertTrue(false);
+////           fail("Test fail");
+//        }
+//    }
 
     @Test
     public void testLogTransaction() {

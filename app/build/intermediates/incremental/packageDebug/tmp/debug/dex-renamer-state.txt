@@ -1,4 +1,4 @@
-#Wed May 11 16:01:51 IST 2022
-base.0=/home/mad/AndroidStudioProjects/SimpleExpenseManager/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Thu May 12 14:00:42 IST 2022
+base.0=C\:\\Users\\User\\AndroidStudioProjects\\SimpleExpenseManager\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
